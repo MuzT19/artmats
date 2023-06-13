@@ -1,0 +1,180 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>View Product</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  </head>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  
+
+    <style>
+      body{
+          font-family: monospace;
+          font-weight: bold;
+          background-size:cover !important;
+			  background-repeat: no-repeat;
+			  background-image: url('image/IMG_0473.JPG');	
+		background-position: center;
+			 
+        }
+   
+   
+       h1{
+        color: rgb(36, 112, 206);
+        text-align: center;
+       }
+        
+       th {
+        color:#d87cd2;
+        font-weight: bold;
+       }
+    
+        </style>
+  
+</head>
+
+<body>
+ 
+    <nav class="navbar navbar-expand-lg sticky-top" style="background-color:rgb(17, 18, 17);">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <li class="logo"><img src="image/LOGO.png" width="100px" height="80px"></li>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">
+                            <button type="button" class="btn btn-outline-info">ARTMATS</button>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="inventory.html">
+                          <button type="button" class="btn btn-outline-info">INVENTORY</button>
+                      </a>
+                  </li>
+  
+                </ul>
+  
+                 <ul class=" navbar-nav ms-auto">
+                <li class="nav-item">
+                  
+                  <a class="nav-link" href="index.html">
+                      <button type="button" class="btn btn-outline-info">LOGOUT</button>
+                  </a>
+              </li>
+            </ul>
+           
+  
+  
+                
+            </div>
+        </div>
+    </nav>
+                   <!--Border-->
+<div class="container-fluid"></div>
+<div class="border border-info border-top-9 border-1 h-500 w-500"></div>
+<br>
+
+<!--Title-->
+<h1>ArtMats! View Data</h1>
+<br>
+
+        <div class="container">
+          <table class="table table-dark">
+                <thead>
+                    <th scope="col">Name</th>
+                    <th scope="col">Art Materials</th>
+                    <th scope="col">Brand Name</th>
+                    <th scope="col">Date Borrow</th>
+                    <th scope="col">Email Address</th>
+               </thead>
+                <tbody id="tbody1">
+                   <!-- <tr>
+                       <td>2</td>
+                       <td>tacv</td>
+                       <td>10</td>
+                       <td>B</td>
+                       <td>male</td>
+                   </tr> -->
+                </tbody>
+           </table>
+        </div>
+       
+        <!--Firebase Libraries-->
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script> 
+
+      <!-- CONFIGURATION -->
+      <script id="MainScript">
+       
+       var firebaseConfig = {
+  apiKey: "AIzaSyCd6ed6Y41SQpWatenqedavs5l3777Gbtg",
+  authDomain: "crud01-8d8d5.firebaseapp.com",
+  databaseURL: "https://crud01-8d8d5-default-rtdb.firebaseio.com",
+  projectId: "crud01-8d8d5",
+  storageBucket: "crud01-8d8d5.appspot.com",
+  messagingSenderId: "758867647149",
+  appId: "1:758867647149:web:ba9e828e3030d4ccf2c424"
+};
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Get all data
+        function SelectAllData(){
+            firebase
+            .database()
+            .ref('TheStudent')
+            .once('value',function(AllRecords){
+             AllRecords.forEach(function(CurrentRecord){
+                        var namebox = CurrentRecord.val().Name;
+                        var artmats = CurrentRecord.val().ArtMaterials;
+                        var brand = CurrentRecord.val().BrandName;
+                        var date = CurrentRecord.val().DateBorrow;
+                        var email = CurrentRecord.val().Email;
+                        AddItemsToTable(namebox,artmats,brand,date,email);
+                    }
+                );
+            });
+        }
+        window.onload = SelectAllData;
+
+        // Filling the table
+        var stdNo = 0;
+        function AddItemsToTable(namebox,artmats,brand,date,email){
+            var tbody = document.getElementById('tbody1');
+            var trow = document.createElement('tr');
+            var td1 = document.createElement('td');
+            var td2 = document.createElement('td');
+            var td3 = document.createElement('td');
+            var td4 = document.createElement('td');
+            var td5 = document.createElement('td');
+            
+            td1.innerHTML = namebox;
+            td2.innerHTML = artmats;
+            td3.innerHTML = brand;
+            td4.innerHTML = date;
+            td5.innerHTML = email;
+            trow.appendChild(td1); 
+            trow.appendChild(td2);
+            trow.appendChild(td3);
+            trow.appendChild(td4);
+            trow.appendChild(td5);
+            tbody.appendChild(trow);
+        }
+        
+      </script>
+
+       
+  <!--Popper-->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+</body>
+</html>

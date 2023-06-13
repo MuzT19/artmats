@@ -1,0 +1,410 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Insert Product</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  </head>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  
+
+    <style>
+
+body{
+      font-family: monospace;
+      font-weight: bold;
+      font-size: medium;
+      
+    }
+
+ 
+   .container{
+    background-size:cover !important;
+			  background-repeat: no-repeat;
+			  background-image: url('image/IMG_0473.JPG');
+			  margin-top: 20px;
+			  margin-bottom:20px;
+		background-position: center;
+			 
+   }
+    
+    .mb-3{
+      font-size: large;
+
+    }
+
+input:hover {
+    transform: scale(1.05);
+}
+
+.placeholder{
+  color: #50607c;
+}
+
+
+    </style>
+
+</head>
+<body style="background-color:rgb(24, 24, 24)">
+  <nav class="navbar navbar-expand-lg sticky-top" style="background-color:rgb(17, 18, 17);">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+              <li class="logo"><img src="image/LOGO.png" width="100px" height="80px"></li>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                
+                  <li class="nav-item">
+                      <a class="nav-link" href="products.html">
+                          <button type="button" class="btn btn-outline-info">ARTMATS</button>
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="inventory.html">
+                        <button type="button" class="btn btn-outline-info">INVENTORY</button>
+                    </a>
+                </li>
+
+              </ul>
+
+               <ul class=" navbar-nav ms-auto">
+              <li class="nav-item">
+                
+                <a class="nav-link" href="index.html">
+                    <button type="button" class="btn btn-outline-info">LOGOUT</button>
+                </a>
+            </li>
+          </ul>
+         
+
+
+              
+          </div>
+      </div>
+  </nav>
+    
+                   <!--Border-->
+<div class="container-fluid"></div>
+<div class="border border-info border-top-9 border-1 h-500 w-500"></div>
+<br>
+
+        <section class="box1">
+          <div class="p-4" style="font-family:monospace; color: lightskyblue;background-color:rgb(17, 18, 17);">
+              <h2 style="text-align:center; color: rgb(40, 198, 230)"><b>ART MATERIALS? YOU CAN BORROW NOW!</b></h2>
+              <div class="text-center p-4"style="background-color:rgb(17, 18, 17);"></div>
+        <div class="container">
+          
+          <form>
+          
+            <div class="mb-3">
+              <label for="namebox" class="form-label">Name:</label>
+              <input style="color:#5068df; border-style: solid; border-color: rgb(246, 46, 229);background-color:rgb(17, 18, 17);" autocomplete="full name"
+                type="text"
+                class="form-control"
+                id="namebox"
+               
+
+                
+              />
+            </div>
+
+            <div class="mb-3">
+                    <label for="artmats" class="form-label">Art Materials:</label>
+                  <select  id="artmats" style="color:#5068df; border-style: solid; border-color: rgb(246, 46, 229);background-color:rgb(17, 18, 17);" >
+                  
+                  <option value="Pencil">Pencil</option>
+                  <option value="ColorPencil">Color Pencil</option>
+                  <option value="Pens">Pens/Markers</option>
+                  <option value="Acrylic">Acrylic</option>
+                  <option value="WaterColor">Water Color</option>
+                  <option value="OilPaint">Oil Paint</option>
+                 
+                </select>
+              </div>
+
+            <div class="mb-3">
+                        <label for="brand" class="form-label">Brand Name:</label>
+                        <input style="color:#5068df; border-style: solid; border-color: rgb(246, 46, 229);background-color:rgb(17, 18, 17);" autocomplete="brand name"
+                          type="text"
+                          class="form-control"
+                          id="brand"
+                          placeholder="Mont Marte"
+                          
+                        />
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="date" class="form-label">Date Borrow:</label>
+                        <input style="color:#5068df; border-style: solid; border-color: rgb(246, 46, 229);background-color:rgb(17, 18, 17);" autocomplete="date"
+                          type="text"
+                          class="form-control"
+                          id="date"
+                          placeholder="mm/dd/yy"
+                          
+                        />
+                      </div>
+
+              
+                      <div class="mb-3">
+                        <label for="email" class="form-label">Email Address:</label>
+                        <input style="color:#5068df; border-style: solid; border-color: rgb(246, 46, 229);background-color:rgb(17, 18, 17);" autocomplete="off"
+                          type="text"
+                          class="form-control"
+                          id="email"
+                          placeholder="Enter your Email Address"
+                          
+                        />
+                      </div>
+
+
+                      <button type="button" class="btn btn-outline-info" id="Subbtn">ADD ITEM</button>
+                      
+                      
+                    </div>
+
+                    
+                       
+        </form>
+        </section>
+        </div>
+
+         <!--Border-->
+<div class="container-fluid"></div>
+<div class="border border-info border-top-9 border-1 h-500 w-500"></div>
+
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  /* Create three equal columns that sits next to each other */
+  .column {
+    flex: 25%;
+    padding: 20px;
+  }
+  </style>
+
+        <!--Product Image-->
+        <br>
+        <h1 style="text-align:center; color: rgb(241, 41, 164);font-family: monospace; letter-spacing: 2px; font-weight: bold;">Art Materials</h1>
+        <br/>
+         
+        <!--Border-->
+<div class="container-fluid"></div>
+<div class="border border-info border-top-9 border-1 h-500 w-500"></div>
+<br>
+
+
+        <h2 style="text-align:center; color: #5085df;font-family: monospace; letter-spacing: 2px;">Pencil</h2>
+        <br/>
+
+        <div class="row">
+          <div class="column">
+            <img src="image/pencilbuddies.jpeg" alt="Snow" style="width:100%; height:100%">
+          </div>
+          <div class="column">
+            <img src="image/pandafly.jpg" alt="Forest" style="width:100%; height:100%">
+          </div>
+          <div class="column">
+            <img src="image/dyvicl.jpeg" alt="Mountains" style="width:100%; height:100%">
+          </div>
+        </div>
+        <br>
+
+         <!--Border-->
+<div class="container-fluid"></div>
+<div class="border border-info border-top-9 border-1 h-500 w-500"></div>
+<br>
+
+
+        <h2 style="text-align:center; color: #5085df;font-family: monospace; letter-spacing: 2px;">Color Pencil</h2>
+        <br/>
+
+        <div class="row">
+          <div class="column">
+            <img src="image/Faber-castell.webp" alt="Snow" style="width:100%; height:100%">
+          </div>
+          <div class="column">
+            <img src="image/CastleArt.webp" alt="Forest" style="width:100%; height:100%">
+          </div>
+          <div class="column">
+            <img src="image/Arteza.webp" alt="Mountains" style="width:100%; height:100%">
+          </div>
+        </div>
+        <br>
+
+         <!--Border-->
+<div class="container-fluid"></div>
+<div class="border border-info border-top-9 border-1 h-500 w-500"></div>
+<br>
+
+
+        <h2 style="text-align:center; color: #5085df;font-family: monospace; letter-spacing: 2px;">Marker</h2>
+        <br/>
+
+        <div class="row">
+          <div class="column">
+            <img src="image/copic.jpeg" alt="Snow" style="width:100%; height:100%">
+          </div>
+          <div class="column">
+            <img src="image/W&NPromarker.jpeg" alt="Forest" style="width:100%; height:100%">
+          </div>
+          <div class="column">
+            <img src="image/posca.jpeg" alt="Mountains" style="width:100%; height:100%">
+          </div>
+        </div>
+        <br>
+
+         <!--Border-->
+<div class="container-fluid"></div>
+<div class="border border-info border-top-9 border-1 h-500 w-500"></div>
+<br>
+
+
+        <h2 style="text-align:center; color: #5085df;font-family: monospace; letter-spacing: 2px;">Acrylic</h2>
+        <br/>
+
+        <div class="row">
+          <div class="column">
+            <img src="image/montmarte.jpeg" alt="Snow" style="width:100%; height:100%">
+          </div>
+          <div class="column">
+            <img src="image/berkeley.jpeg" alt="Forest" style="width:100%; height:100%">
+          </div>
+          <div class="column">
+            <img src="image/liquitex.jpeg" alt="Mountains" style="width:100%; height:100%">
+          </div>
+        </div>
+        <br>
+
+         <!--Border-->
+<div class="container-fluid"></div>
+<div class="border border-info border-top-9 border-1 h-500 w-500"></div>
+<br>
+
+
+        <h2 style="text-align:center; color: #5085df;font-family: monospace; letter-spacing: 2px;">Water Color</h2>
+        <br/>
+
+        <div class="row">
+          <div class="column">
+            <img src="image/wnwatercolor.jpeg" alt="Snow" style="width:100%; height:100%">
+          </div>
+          <div class="column">
+            <img src="image/giorgione.jpeg" alt="Forest" style="width:100%; height:100%">
+          </div>
+          <div class="column">
+            <img src="image/sennelier.jpeg" alt="Mountains" style="width:100%; height:100%">
+          </div>
+        </div>
+        <br>
+
+         <!--Border-->
+<div class="container-fluid"></div>
+<div class="border border-info border-top-9 border-1 h-500 w-500"></div>
+<br>
+
+
+        <h2 style="text-align:center; color: #5085df;font-family: monospace; letter-spacing: 2px;">Oil Paint</h2>
+        <br/>
+
+        <div class="row">
+          <div class="column">
+            <img src="image/ohuhu.webp" alt="Snow" style="width:100%; height:100%">
+          </div>
+          <div class="column">
+            <img src="image/williamsburg.jpeg" alt="Forest" style="width:100%; height:100%">
+          </div>
+          <div class="column">
+            <img src="image/magicfy.jpeg" alt="Mountains" style="width:100%; height:100%">
+          </div>
+        </div>
+
+        <!--SCRIPT-->
+        <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"
+      ></script>
+
+      <script type="module">
+         // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+  apiKey: "AIzaSyCd6ed6Y41SQpWatenqedavs5l3777Gbtg",
+  authDomain: "crud01-8d8d5.firebaseapp.com",
+  databaseURL: "https://crud01-8d8d5-default-rtdb.firebaseio.com",
+  projectId: "crud01-8d8d5",
+  storageBucket: "crud01-8d8d5.appspot.com",
+  messagingSenderId: "758867647149",
+  appId: "1:758867647149:web:ba9e828e3030d4ccf2c424"
+};
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+
+        import {getDatabase, ref, set, child, update, remove, get}
+        from "https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js"
+
+        const db = getDatabase();
+
+         // references
+
+        var Name = document.getElementById("namebox");
+        var ArtMaterials = document.getElementById("artmats");
+        var BrandName = document.getElementById("brand");
+        var DateBorrow = document.getElementById("date");
+        var Email = document.getElementById("email");
+
+        var subBtn = document.getElementById("Subbtn")
+        
+       
+        // add data function
+
+        function SubmitData(){
+            set(ref(db, "TheStudent/"+ namebox.value),{
+                Name: namebox.value,
+                ArtMaterials: artmats.value,
+                BrandName: brand.value,
+                DateBorrow: date.value,
+                Email: email.value,
+                
+            })
+            
+            .then(()=>{
+                alert("data stored successfully");
+            })
+            .catch((error)=>{
+                alert("unsuccessful, error" + error)
+            });
+        }
+
+      
+        // Aasign event button
+        subBtn.addEventListener('click', SubmitData);
+
+        
+       
+      </script>
+
+
+        
+
+  <!--Popper-->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+</body>
+</html>
